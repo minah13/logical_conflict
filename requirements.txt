@@ -1,0 +1,7 @@
+rdflib>=7.0.0
+
+# Optional: needed only for dataset.wikicontradict.load_from_huggingface()
+# datasets>=2.19.0
+
+# Optional: needed only for extraction.llm.LLMClaimExtractor
+# anthropic>=0.40.0

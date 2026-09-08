@@ -1,5 +1,15 @@
 # Ontology-based Perspective-Aware Contradiction Detection for Explainable RAG
 
+## 데이터셋
+
+#### rag_conflicts: 최초 1회 자동 다운로드(~46MB) 후 캐시 재사용
+Google Conflicts (rag_conflicts): github.com/google-research-datasets/rag_conflicts
+python scripts/build_ontology.py --dataset google_conflicts --limit 200 --output output/google_conflicts.ttl
+
+#### WikiContradict: 경량 직접 다운로드 (datasets 패키지 불필요)
+WikiContradict: huggingface.co/datasets/ibm-research/Wikipedia_contradict_benchmark
+python scripts/build_ontology.py --dataset wikicontradict --output output/wikicontradict.ttl
+
 ## 문제 정의
 
 Retrieval-Augmented Generation(RAG)은 외부 문서를 검색하여 LLM의 응답 생성에 활용함으로써 환각(Hallucination)을 줄이고 최신 정보를 반영할 수 있다.
